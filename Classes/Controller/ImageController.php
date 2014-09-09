@@ -30,7 +30,13 @@ namespace T3T\T3tBackstretch\Controller;
  * ImageController
  */
 class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
-
+		
+	/**
+	 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManager
+	 */
+	protected $configurationManager;
+	
+	
 	/**
 	 * imageRepository
 	 *
@@ -38,6 +44,7 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @inject
 	 */
 	protected $imageRepository = NULL;
+	
 
 	/**
 	 * action list
@@ -45,7 +52,26 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @return void
 	 */
 	public function listAction() {
-		$images = $this->imageRepository->findAll();
+		$configuration = $this->configurationManager->getConfiguration(
+			\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK
+		);
+		
+		if(isset($configuration['persistence']['storagePid'])){
+			$storagePid = intval($configuration['persistence']['storagePid']);
+		}else{	
+			$storagePid = 1;
+		}
+		$currentPid = $GLOBALS["TSFE"]->id;
+		$imageCount = $this->imageRepository->findByPid($currentPid)->count();
+		
+		if($imageCount > 0){
+			$images = $this->imageRepository->findByPid($currentPid);
+		}else{
+			$images = $this->imageRepository->findByPid($storagePid);
+		}
+
+	    
+		//$images = $this->imageRepository->findByIdentifier($identifier);
 		$this->view->assign('images', $images);
 	}
 

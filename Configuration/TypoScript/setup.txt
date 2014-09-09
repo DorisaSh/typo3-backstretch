@@ -1,3 +1,16 @@
+[globalVar = LIT:1 = {$plugin.tx_t3tbackstretch.includejquerycore}]
+page.includeJS {
+	jquery = //ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
+	jquery.external = 1
+	jquery.forceOnTop = 1
+}
+[global]
+
+page.includeJS {
+	backstretch = EXT:t3t_backstretch/Resources/Public/JavaScript/jquery.backstretch.min.js
+}
+
+
 
 plugin.tx_t3tbackstretch {
 	view {
