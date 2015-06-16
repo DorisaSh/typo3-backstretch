@@ -5,7 +5,7 @@ namespace T3T\T3tBackstretch\Tests\Unit\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2014 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
+ *  (c) 2015 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
  *
  *  All rights reserved
  *
@@ -46,6 +46,29 @@ class ImageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 
 	protected function tearDown() {
 		unset($this->subject);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getTitleReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getTitle()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setTitleForStringSetsTitle() {
+		$this->subject->setTitle('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'title',
+			$this->subject
+		);
 	}
 
 	/**

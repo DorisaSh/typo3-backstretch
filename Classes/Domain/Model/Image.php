@@ -32,6 +32,13 @@ namespace T3T\T3tBackstretch\Domain\Model;
 class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
+	 * title
+	 *
+	 * @var string
+	 */
+	protected $title = '';
+
+	/**
 	 * image
 	 *
 	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
@@ -56,6 +63,25 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
 		$this->image = $image;
+	}
+
+	/**
+	 * Returns the title
+	 *
+	 * @return string $title
+	 */
+	public function getTitle() {
+		return $this->title;
+	}
+
+	/**
+	 * Sets the title
+	 *
+	 * @param string $title
+	 * @return void
+	 */
+	public function setTitle($title) {
+		$this->title = $title;
 	}
 
 }

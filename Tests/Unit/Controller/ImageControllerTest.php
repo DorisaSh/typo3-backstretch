@@ -3,7 +3,7 @@ namespace T3T\T3tBackstretch\Tests\Unit\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2014 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
+ *  (c) 2015 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
  *  			
  *  All rights reserved
  *

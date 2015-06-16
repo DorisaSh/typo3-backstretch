@@ -29,7 +29,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
-                    "sorting": false,
+                    "sorting": true,
                     "type": "Entity",
                     "uid": "19600547948"
                 },
@@ -39,7 +39,17 @@
                             "allowedFileTypes": "",
                             "maxItems": "1",
                             "propertyDescription": "",
-                            "propertyIsExcludeField": true,
+                            "propertyIsExcludeField": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "1415061117289"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
                             "propertyIsRequired": true,
                             "propertyName": "image",
                             "propertyType": "Image",
@@ -69,7 +79,7 @@
             "sourceLanguage": "en",
             "state": "alpha",
             "targetVersion": "6.2",
-            "version": "1.0.0"
+            "version": "1.0.2"
         },
         "extensionKey": "t3t_backstretch",
         "name": "Backstretch",
@@ -99,8 +109,8 @@
 
     ],
     "log": {
-        "last_modified": "2014-09-09 09:36",
+        "last_modified": "2015-06-16 12:29",
         "extension_builder_version": "6.2.0",
-        "be_user": " (1)"
+        "be_user": "Elvis Tavasja (1)"
     }
 }
