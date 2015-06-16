@@ -1,12 +1,11 @@
 <?php
-namespace W3Development\T3tBackstretch\Controller;
-
+namespace T3T\T3tBackstretch\Controller;
 
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2015 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
+ *  (c) 2014 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
  *
  *  All rights reserved
  *
@@ -31,14 +30,21 @@ namespace W3Development\T3tBackstretch\Controller;
  * ImageController
  */
 class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
-
+		
+	/**
+	 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManager
+	 */
+	protected $configurationManager;
+	
+	
 	/**
 	 * imageRepository
 	 *
-	 * @var \W3Development\T3tBackstretch\Domain\Repository\ImageRepository
+	 * @var \T3T\T3tBackstretch\Domain\Repository\ImageRepository
 	 * @inject
 	 */
 	protected $imageRepository = NULL;
+	
 
 	/**
 	 * action list
@@ -46,7 +52,26 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @return void
 	 */
 	public function listAction() {
-		$images = $this->imageRepository->findAll();
+		$configuration = $this->configurationManager->getConfiguration(
+			\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK
+		);
+		
+		if(isset($configuration['persistence']['storagePid'])){
+			$storagePid = intval($configuration['persistence']['storagePid']);
+		}else{	
+			$storagePid = 1;
+		}
+		$currentPid = $GLOBALS["TSFE"]->id;
+		$imageCount = $this->imageRepository->findByPid($currentPid)->count();
+		
+		if($imageCount > 0){
+			$images = $this->imageRepository->findByPid($currentPid);
+		}else{
+			$images = $this->imageRepository->findByPid($storagePid);
+		}
+
+	    
+		//$images = $this->imageRepository->findByIdentifier($identifier);
 		$this->view->assign('images', $images);
 	}
 

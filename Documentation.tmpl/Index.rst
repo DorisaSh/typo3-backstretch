@@ -28,7 +28,7 @@ Backstretch
 		comma,separated,list,of,keywords
 
 	:Copyright:
-		2015
+		2014
 
 	:Author:
 		Elvis Tavasja

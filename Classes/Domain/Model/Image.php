@@ -1,12 +1,11 @@
 <?php
-namespace W3Development\T3tBackstretch\Domain\Model;
-
+namespace T3T\T3tBackstretch\Domain\Model;
 
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2015 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
+ *  (c) 2014 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
  *
  *  All rights reserved
  *
