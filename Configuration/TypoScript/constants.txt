@@ -1,8 +1,5 @@
+
 plugin.tx_t3tbackstretch {
-	
-	# cat=plugin.tx_t3tbackstretch; type=boolean; label=Include jQuery core: Include jQuery core script
-	includejquerycore =
-	
 	view {
 		# cat=plugin.tx_t3tbackstretch/file; type=string; label=Path to template root (FE)
 		templateRootPath = EXT:t3t_backstretch/Resources/Private/Templates/
@@ -11,9 +8,8 @@ plugin.tx_t3tbackstretch {
 		# cat=plugin.tx_t3tbackstretch/file; type=string; label=Path to template layouts (FE)
 		layoutRootPath = EXT:t3t_backstretch/Resources/Private/Layouts/
 	}
-	
 	persistence {
 		# cat=plugin.tx_t3tbackstretch//a; type=string; label=Default storage PID
-		storagePid = 
+		storagePid =
 	}
 }

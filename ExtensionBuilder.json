@@ -64,7 +64,7 @@
             "category": "plugin",
             "custom_category": "",
             "dependsOn": "typo3 => 6.2\n",
-            "disableLocalization": false,
+            "disableLocalization": true,
             "disableVersioning": false,
             "sourceLanguage": "en",
             "state": "alpha",
@@ -93,14 +93,14 @@
                 "name": "Backstretch"
             }
         ],
-        "vendorName": "T3T"
+        "vendorName": "W3Development"
     },
     "wires": [
 
     ],
     "log": {
-        "last_modified": "2014-09-09 09:36",
+        "last_modified": "2015-06-16 11:39",
         "extension_builder_version": "6.2.0",
-        "be_user": " (1)"
+        "be_user": "Elvis Tavasja (1)"
     }
 }

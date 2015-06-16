@@ -1,9 +1,9 @@
 <?php
-namespace T3T\T3tBackstretch\Tests\Unit\Controller;
+namespace W3Development\T3tBackstretch\Tests\Unit\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2014 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
+ *  (c) 2015 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
  *  			
  *  All rights reserved
  *
@@ -25,19 +25,19 @@ namespace T3T\T3tBackstretch\Tests\Unit\Controller;
  ***************************************************************/
 
 /**
- * Test case for class T3T\T3tBackstretch\Controller\ImageController.
+ * Test case for class W3Development\T3tBackstretch\Controller\ImageController.
  *
  * @author Elvis Tavasja <tavasja@gmail.com>
  */
 class ImageControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 
 	/**
-	 * @var \T3T\T3tBackstretch\Controller\ImageController
+	 * @var \W3Development\T3tBackstretch\Controller\ImageController
 	 */
 	protected $subject = NULL;
 
 	protected function setUp() {
-		$this->subject = $this->getMock('T3T\\T3tBackstretch\\Controller\\ImageController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
+		$this->subject = $this->getMock('W3Development\\T3tBackstretch\\Controller\\ImageController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
 	}
 
 	protected function tearDown() {
@@ -51,7 +51,7 @@ class ImageControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 
 		$allImages = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array(), array(), '', FALSE);
 
-		$imageRepository = $this->getMock('T3T\\T3tBackstretch\\Domain\\Repository\\ImageRepository', array('findAll'), array(), '', FALSE);
+		$imageRepository = $this->getMock('W3Development\\T3tBackstretch\\Domain\\Repository\\ImageRepository', array('findAll'), array(), '', FALSE);
 		$imageRepository->expects($this->once())->method('findAll')->will($this->returnValue($allImages));
 		$this->inject($this->subject, 'imageRepository', $imageRepository);
 

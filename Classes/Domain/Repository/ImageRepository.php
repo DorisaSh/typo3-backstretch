@@ -1,11 +1,12 @@
 <?php
-namespace T3T\T3tBackstretch\Domain\Repository;
+namespace W3Development\T3tBackstretch\Domain\Repository;
+
 
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2014 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
+ *  (c) 2015 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
  *
  *  All rights reserved
  *
@@ -31,13 +32,5 @@ namespace T3T\T3tBackstretch\Domain\Repository;
  */
 class ImageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
-	public function findByPid($pid) {
-		$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
-		$querySettings->setRespectStoragePage(FALSE);
-		$this->setDefaultQuerySettings($querySettings);
-		$query = $this->createQuery();
-		$query->matching($query->equals('pid', $pid));
-		return $query->execute();
 	
-	}
 }
