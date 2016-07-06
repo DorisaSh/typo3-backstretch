@@ -12,16 +12,16 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Backstretch',
-	'description' => '',
+	'description' => 'Backstretch is a simple jQuery plugin that allows you to add a dynamically-resized, slideshow-capable background image to any page or element. The image will stretch to fit the page/element, and will automatically resize as the window/element size changes',
 	'category' => 'plugin',
 	'author' => 'Elvis Tavasja',
-	'author_email' => 'tavasja@gmail.com',
-	'state' => 'alpha',
+	'author_email' => 'info@w3development.net',
+	'state' => 'beta',
 	'internal' => '',
 	'uploadfolder' => '1',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '1.0.2',
+	'version' => '1.0.4',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2.0 - 6.2.99',
