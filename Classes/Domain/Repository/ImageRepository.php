@@ -31,6 +31,12 @@ namespace T3T\T3tBackstretch\Domain\Repository;
  */
 class ImageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
+	// Order by BE sorting
+	protected $defaultOrderings = array(
+		'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
+	);
+
+
 	/**
 	 * @param $pid
 	 */
@@ -38,8 +44,9 @@ class ImageRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		$querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
 		$querySettings->setRespectStoragePage(FALSE);
 		$this->setDefaultQuerySettings($querySettings);
+
 		$query = $this->createQuery();
-		//$query->setOrderings(array('title' => Tx_Extbase_Persistence_QueryInterface::ORDER_DESCENDING));
+
 		$query->matching($query->equals('pid', $pid));
 
 		return $query->execute();
