@@ -1,5 +1,5 @@
 <?php
-namespace T3T\T3tBackstretch\Domain\Repository;
+namespace W3D\T3tBackstretch\Domain\Repository;
 
 /***************************************************************
  *

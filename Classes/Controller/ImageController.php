@@ -1,5 +1,5 @@
 <?php
-namespace T3T\T3tBackstretch\Controller;
+namespace W3D\T3tBackstretch\Controller;
 
 /***************************************************************
  *
@@ -39,7 +39,7 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * imageRepository
 	 *
-	 * @var \T3T\T3tBackstretch\Domain\Repository\ImageRepository
+	 * @var \W3D\T3tBackstretch\Domain\Repository\ImageRepository
 	 * @inject
 	 */
 	protected $imageRepository = NULL;

@@ -1,6 +1,6 @@
 <?php
 
-namespace T3T\T3tBackstretch\Tests\Unit\Domain\Model;
+namespace W3D\T3tBackstretch\Tests\Unit\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -27,7 +27,7 @@ namespace T3T\T3tBackstretch\Tests\Unit\Domain\Model;
  ***************************************************************/
 
 /**
- * Test case for class \T3T\T3tBackstretch\Domain\Model\Image.
+ * Test case for class \W3D\T3tBackstretch\Domain\Model\Image.
  *
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
@@ -36,12 +36,12 @@ namespace T3T\T3tBackstretch\Tests\Unit\Domain\Model;
  */
 class ImageTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
-	 * @var \T3T\T3tBackstretch\Domain\Model\Image
+	 * @var \W3D\T3tBackstretch\Domain\Model\Image
 	 */
 	protected $subject = NULL;
 
 	protected function setUp() {
-		$this->subject = new \T3T\T3tBackstretch\Domain\Model\Image();
+		$this->subject = new \W3D\T3tBackstretch\Domain\Model\Image();
 	}
 
 	protected function tearDown() {

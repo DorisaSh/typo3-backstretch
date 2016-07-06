@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'T3T.' . $_EXTKEY,
+	'W3D.' . $_EXTKEY,
 	'Pi1',
 	array(
 		'Image' => 'list',
