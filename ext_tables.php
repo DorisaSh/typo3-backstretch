@@ -36,9 +36,11 @@ $GLOBALS['TCA']['tx_t3tbackstretch_domain_model_image'] = array(
 		),
 		'searchFields' => 'title,image,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Image.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_t3tbackstretch_domain_model_image.svg',
-		'typeicon_classes' => array(
-		        'default' => 'tx-t3tbackstretch-image',
-		),
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_t3tbackstretch_domain_model_image.gif',		
 	),
 );
+
+
+if (version_compare(TYPO3_version, '7.6.0', '>=')) {
+	$GLOBALS['TCA']['tx_t3tbackstretch_domain_model_image']['ctrl']['typeicon_classes']['default'] = 'tx-t3tbackstretch-image';
+}
