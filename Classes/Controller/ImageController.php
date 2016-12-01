@@ -5,7 +5,7 @@ namespace W3D\T3tBackstretch\Controller;
  *
  *  Copyright notice
  *
- *  (c) 2014 Elvis Tavasja <tavasja@gmail.com>, www.typo3tutorials.net
+ *  (c) 2014 Elvis Tavasja <elvis@w3development.net>, w3development.net
  *
  *  All rights reserved
  *
