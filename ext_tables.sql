@@ -38,3 +38,10 @@ CREATE TABLE tx_t3tbackstretch_domain_model_image (
  	KEY language (l10n_parent,sys_language_uid)
 
 );
+
+#
+# Table structure for table 'pages'
+#
+CREATE TABLE pages (
+	tx_t3tbackstretch_enable tinyint(3) DEFAULT '0' NOT NULL,
+);

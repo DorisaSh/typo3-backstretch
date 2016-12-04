@@ -59,6 +59,9 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 			$storagePid = 1;
 		}
 		$currentPid = $GLOBALS['TSFE']->id;
+
+		# \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($GLOBALS['TSFE']->page['tx_t3tbackstretch_enable']);
+
 		$imageCount = $this->imageRepository->findByPid($currentPid)->count();
 		if ($imageCount > 0) {
 			$images = $this->imageRepository->findByPid($currentPid);
@@ -66,7 +69,10 @@ class ImageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 			$images = $this->imageRepository->findByPid($storagePid);
 		}
 		//$images = $this->imageRepository->findByIdentifier($identifier);
-		$this->view->assign('images', $images);
+		if(isset($images) && intval($GLOBALS['TSFE']->page['tx_t3tbackstretch_enable'])){
+			$this->view->assign('images', $images);
+		}
+		
 	}
 
 }

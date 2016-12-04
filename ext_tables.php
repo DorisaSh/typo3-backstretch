@@ -12,7 +12,9 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Backstretch');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_t3tbackstretch_domain_model_image', 'EXT:t3t_backstretch/Resources/Private/Language/locallang_csh_tx_t3tbackstretch_domain_model_image.xlf');
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_t3tbackstretch_domain_model_image');
+
 $GLOBALS['TCA']['tx_t3tbackstretch_domain_model_image'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:t3t_backstretch/Resources/Private/Language/locallang_db.xlf:tx_t3tbackstretch_domain_model_image',
@@ -40,6 +42,26 @@ $GLOBALS['TCA']['tx_t3tbackstretch_domain_model_image'] = array(
 	),
 );
 
+
+$tempColumns['tx_t3tbackstretch_enable'] = array(
+	'exclude' => 0,
+	'label' => 'Backstretch',
+	'config' => array(
+		'type' => 'check',
+		'items' => array(
+			array('LLL:EXT:lang/locallang_core.xlf:labels.enabled', ''),
+		),
+	)
+);
+
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $tempColumns);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+	'pages',
+	'visibility',
+	'tx_t3tbackstretch_enable',
+	'after:nav_hide'
+);
 
 if (version_compare(TYPO3_version, '7.6.0', '>=')) {
 	$GLOBALS['TCA']['tx_t3tbackstretch_domain_model_image']['ctrl']['typeicon_classes']['default'] = 'tx-t3tbackstretch-image';
