@@ -4,7 +4,7 @@
 	<f:if condition="{images}">
 	  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js" async></script>
       <script type="text/javascript">
-      	$.backstretch([	  	
+      	jQuery.backstretch([	  	
 			<f:for each="{images}" as="image">
 				 "{image.image.originalResource.publicUrl}",
 			</f:for>
