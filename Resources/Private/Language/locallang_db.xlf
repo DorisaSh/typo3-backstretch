@@ -3,8 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-16T12:29:57Z" product-name="t3t_backstretch">
 		<header/>
 		<body>
+		
 			<trans-unit id="tx_t3tbackstretch_domain_model_image">
 				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_t3tbackstretch_domain_model_image1">
+				<source>Imagess</source>
 			</trans-unit>
 			<trans-unit id="tx_t3tbackstretch_domain_model_image.title">
 				<source>Title</source>
