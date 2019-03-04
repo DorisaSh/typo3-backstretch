@@ -7,9 +7,6 @@
 			<trans-unit id="tx_t3tbackstretch_domain_model_image">
 				<source>Image</source>
 			</trans-unit>
-			<trans-unit id="tx_t3tbackstretch_domain_model_image1">
-				<source>Imagess</source>
-			</trans-unit>
 			<trans-unit id="tx_t3tbackstretch_domain_model_image.title">
 				<source>Title</source>
 			</trans-unit>

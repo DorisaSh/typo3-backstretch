@@ -35,7 +35,7 @@ if (version_compare(TYPO3_version, '7.6.0', '>=')) {
 return [
    'ctrl' => [
       'title' =>  'LLL:EXT:t3t_backstretch/Resources/Private/Language/locallang_db.xlf:tx_t3tbackstretch_domain_model_image',
-      'label' => 'name',
+      'label' => 'title',
       'iconfile' => 'EXT:t3t_backstretch/Resources/Public/Icons/tx_t3tbackstretch_domain_model_image.gif',
       	'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
