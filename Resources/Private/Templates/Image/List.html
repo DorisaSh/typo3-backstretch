@@ -1,0 +1,22 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<f:flashMessages renderMode="div" />
+	  $.backstretch([	  	
+		<f:for each="{images}" as="image">
+			 "{image.image.originalResource.publicUrl}",
+		</f:for>
+	  ], {duration: 5000, fade: 750});	
+</f:section>
